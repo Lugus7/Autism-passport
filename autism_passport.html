@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Medical Passport</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --background-color: #f5f6fa;
+            --section-bg: #ffffff;
+            --text-color: #2c3e50;
+            --border-color: #dcdde1;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--section-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: var(--section-bg);
+        }
+        .section h2 {
+            color: var(--secondary-color);
+            margin-top: 0;
+        }
+        .subsection {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: var(--background-color);
+            border-radius: 5px;
+        }
+        .field {
+            margin: 10px 0;
+            padding: 5px;
+        }
+        .field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+        .field input[type="text"], 
+        .field textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .print-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Autism Medical Passport</h1>
+
+        <div class="section">
+            <h2>Personal Information</h2>
+            <div class="field">
+                <label>Name:</label>
+                <input type="text" placeholder="Enter full name">
+            </div>
+            <div class="field">
+                <label>Date of Birth:</label>
+                <input type="text" placeholder="DD/MM/YYYY">
+            </div>
+            <div class="field">
+                <label>NHS Number (if applicable):</label>
+                <input type="text" placeholder="NHS Number">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Communication Preferences</h2>
+            <div class="subsection">
+                <div class="field">
+                    <label>Preferred Communication Method:</label>
+                    <textarea placeholder="e.g., Verbal, Written, AAC device, Sign language"></textarea>
+                </div>
+                <div class="field">
+                    <label>Processing Time Needed:</label>
+                    <textarea placeholder="Describe how much time you need to process information and respond"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Sensory Needs</h2>
+            <div class="subsection">
+                <div class="field">
+                    <label>Light Sensitivity:</label>
+                    <textarea placeholder="Describe any sensitivity to lights, preferences for lighting"></textarea>
+                </div>
+                <div class="field">
+                    <label>Sound Sensitivity:</label>
+                    <textarea placeholder="Describe any sensitivity to sounds, noise levels"></textarea>
+                </div>
+                <div class="field">
+                    <label>Touch Sensitivity:</label>
+                    <textarea placeholder="Describe any sensitivity to touch, texture preferences"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Support Needs</h2>
+            <div class="subsection">
+                <div class="field">
+                    <label>Anxiety Triggers:</label>
+                    <textarea placeholder="List situations or things that may cause anxiety"></textarea>
+                </div>
+                <div class="field">
+                    <label>Calming Strategies:</label>
+                    <textarea placeholder="List what helps when feeling overwhelmed or anxious"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Medical Information</h2>
+            <div class="subsection">
+                <div class="field">
+                    <label>Allergies:</label>
+                    <textarea placeholder="List any allergies"></textarea>
+                </div>
+                <div class="field">
+                    <label>Current Medications:</label>
+                    <textarea placeholder="List current medications and dosages"></textarea>
+                </div>
+                <div class="field">
+                    <label>Pain Response:</label>
+                    <textarea placeholder="Describe how you express pain or discomfort"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Emergency Contacts</h2>
+            <div class="subsection">
+                <div class="field">
+                    <label>Primary Contact:</label>
+                    <textarea placeholder="Name, relationship, phone number"></textarea>
+                </div>
+                <div class="field">
+                    <label>Secondary Contact:</label>
+                    <textarea placeholder="Name, relationship, phone number"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <button class="print-button" onclick="window.print()">Print Passport</button>
+    </div>
+</body>
+</html>
